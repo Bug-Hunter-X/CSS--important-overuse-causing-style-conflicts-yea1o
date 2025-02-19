@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates a common issue: the use of `!important` to override styles.  While seemingly a quick fix, overuse of `!important` can lead to difficult-to-debug style conflicts and makes maintaining the CSS much harder.
+
+```css
+.my-element {
+  color: blue;
+}
+
+.my-element {
+  color: red !important; 
+}
+```
+
+In this example, the `red` color will always be applied to `.my-element` regardless of any other styles that might target it, due to `!important`.
