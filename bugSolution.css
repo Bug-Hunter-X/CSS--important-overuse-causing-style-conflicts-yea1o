@@ -1,0 +1,13 @@
+The solution lies in avoiding `!important` and instead using more specific selectors or the CSS cascade to control styles. For example, if we have a more specific style, this style will take precedence.
+
+```css
+.container .my-element {
+  color: blue;
+}
+
+.my-element {
+  color: red;
+}
+```
+
+In this case the blue color will be applied to `.my-element` when it is a child of the container element, as it is more specific than the other selector.  This approach helps achieve the intended style without relying on `!important`, which contributes to a cleaner and more maintainable CSS structure.
